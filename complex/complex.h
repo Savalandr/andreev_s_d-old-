@@ -1,6 +1,5 @@
 #ifndef COMPLEX_H
 #define COMPLEX_H
-//#pragma once
 #include <iosfwd>
 #include <iostream>
 #include <sstream>
@@ -11,12 +10,12 @@ struct Complex {
 	 Complex(const double real, const double imaginary);
 	 bool operator==(const Complex& rhs) const { return (re == rhs.re) && (im == rhs.im); }
 	 bool operator!=(const Complex& rhs) const { return !operator==(rhs); }
-	 Complex& operator+=(const Complex& rhs);
-	 Complex& operator+=(const double rhs) { return operator+=(Complex(rhs)); }
-	 Complex& operator-=(const Complex& rhs);
-	 Complex& operator-=(const double rhs) { return operator-=(Complex(rhs)); }
-	 Complex& operator*=(const Complex& rhs);
-	 Complex& operator*=(const double rhs);
+	 Complex& operator+=(const Complex& rhs); //для этого
+	 Complex& operator+=(const double rhs);   //для этого
+	 Complex& operator-=(const Complex& rhs); //для этого
+	 Complex& operator-=(const double rhs);   //для этого
+	 Complex& operator*=(const Complex& rhs); //для этого
+	 Complex& operator*=(const double rhs);   //для этого
 	 std::ostream& writeTo(std::ostream& ostrm) const;
 	 std::istream& readFrom(std::istream& istrm);
 	
