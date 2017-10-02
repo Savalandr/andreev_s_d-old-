@@ -1,0 +1,13 @@
+
+.vs/аndreev_s_d/v15/.suo
+.vs/аndreev_s_d/v15/Browse.VC.db
+*.ipch
+complex/complex.vcxproj.filters
+complex/Debug/complex.log
+*.tlog
+*.obj
+*.idb
+*.pdb
+Debug/complex.exe
+Debug/complex.ilk
+аndreev_s_d.sln
