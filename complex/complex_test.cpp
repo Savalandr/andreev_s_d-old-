@@ -12,6 +12,10 @@ int main()
 	testParse("{8.9, 9}");
 	testParse("{8.9,9");
 	return 0;
+
+	cout << "test";
+	return 0;
+	
 }
 
 //

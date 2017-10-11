@@ -11,3 +11,11 @@ complex/Debug/complex.log
 Debug/complex.exe
 Debug/complex.ilk
 аndreev_s_d.sln
+.vs/andreev_s_d/v15/.suo
+*.db
+*.sln
+*.exe
+*.ilk
+*.log
+*.vcxproj
+*.filters
