@@ -30,6 +30,8 @@ int main()
 	N4.y = 2;
 	N4.z = 3;
 
+	vec3d N5;
+
 	vec3d M;
 	M.x = 1;
 	M.y = 2;
@@ -51,11 +53,12 @@ int main()
 
 	cout << N4.x << " " << N4.y << " " << N4.z << endl;
 	
+	cout << "TEXT_test" << endl;
+
+	//дописать (придумать) проверку для проверок на равенство/неравенство
+
 	int ThatsAll;
 		cin >> ThatsAll;
 
 	return 0;
 }
-
-//та - да
-//спасибо большое, вроде бы понял)))

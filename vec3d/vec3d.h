@@ -9,10 +9,15 @@ struct vec3d
 	double x = 0.0;
 	double y = 0.0;
 	double z = 0.0;
+	double eps = 0.00001;
 
 	vec3d() = default;											 //умолчательный конструктор
 
 	vec3d& operator=(const vec3d& rhs) = default;                // ??? !!!
+
+	bool operator ==(const vec3d& rhs)const;					 //проверка на равенство
+
+	bool operator !=(const vec3d& rhs)const;					 //проверка на неравенство
 
 	vec3d(const double xv, const double yv, const double zv);	 //конструктор
 	

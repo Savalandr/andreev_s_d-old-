@@ -77,12 +77,16 @@
 		return rez;
 	}
 
-	bool vec3d :: operator==(const vec3d& rhs) const
+	bool vec3d :: operator==(const vec3d& rhs) const					//проверка на равенство
 	{
-		return ();
+		bool a = true;
+		!(abs(x - rhs.x) < eps) ? a = false : a = a;
+		!(abs(y - rhs.y) < eps) ? a = false : a = a;
+		!(abs(z - rhs.z) < eps) ? a = false : a = a;
+		return a;
 	}
 
-	bool vec3d :: operator !=(const vec3d& rhs) const
+	bool vec3d :: operator !=(const vec3d& rhs) const					//проверка на неравенство
 	{
 		return !operator==(rhs);
 	}
