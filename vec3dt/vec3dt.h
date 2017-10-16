@@ -33,7 +33,8 @@ struct Vec3dT
 
 	Vec3dT& operator-=(const Vec3dT& vec);                       //перегрузка убавления
 
-	Vec3dT& operator*=(const double rhs);						 //перегрузка умножения	
+	Vec3dT& operator*=(const double rhs);						 //перегрузка умножения
+
 
 	T x{ T() };													 //???
 	T y{ T() };													 //???
