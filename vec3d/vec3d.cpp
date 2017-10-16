@@ -1,6 +1,6 @@
 #include <iostream> 
 #include <sstream> 
-#include "vec3d.h"
+#include "Vec3d.h"
 
 
 	Vec3d::Vec3d(const double xv, const double yv, const double zv)		//реализация конструктора

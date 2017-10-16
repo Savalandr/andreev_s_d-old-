@@ -1,6 +1,6 @@
 #include <iostream> 
 #include <sstream> 
-#include "vec3d.h"
+#include "Vec3d.h"
 using namespace std;
 
 int main()

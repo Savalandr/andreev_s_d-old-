@@ -4,70 +4,72 @@
 #include <iostream>
 #include <sstream>
 
-template<typename t> //для шаблонного типа
+template<typename T>											//для шаблонного типа
 
-struct vec3dt
+struct Vec3dT
 {
-	double x = 0.0;
-	double y = 0.0;
-	double z = 0.0;
+	//double x = 0.0;
+	//double y = 0.0;
+	//double z = 0.0;
 	double eps = 0.00001;
 
-	vec3dt(const t& xv, const t& yv, const t& zv);
+	Vec3dT(const T& xv, const T& yv, const T& zv);
 
-	vec3dt() = default;											 //умолчательный конструктор
+	Vec3dT() = default;											 //умолчательный конструктор
 
-	vec3dt& operator=(const vec3dt& rhs) = default;              // ??? !!!
+	Vec3dT& operator=(const Vec3dT& rhs) = default;              // ??? !!!
 
-	bool operator ==(const vec3dt& rhs)const;					 //проверка на равенство
+	bool operator ==(const Vec3dT& rhs)const;					 //проверка на равенство
 
-	bool operator !=(const vec3dt& rhs)const;					 //проверка на неравенство
+	bool operator !=(const Vec3dT& rhs)const;					 //проверка на неравенство
 
-	//vec3d(const double xv, const double yv, const double zv);	 //конструктор
+	//Vec3dT(const double xv, const double yv, const double zv);	 //конструктор
 
-	//vec3dt(const vec3dt& v);									 //конструктор копирования (получает вектор "v")
+	//Vec3dT(const vec3dT& v);									 //конструктор копирования (получает вектор "v")
 
-	~vec3dt() = default;										 //удалятор
+	~Vec3dT() = default;										 //удалятор
 
-	vec3dt& operator+=(const vec3dt& vec);                       //перегрузка прибавления
+	Vec3dT& operator+=(const Vec3dT& vec);                       //перегрузка прибавления
 
-	vec3dt& operator-=(const vec3dt& vec);                       //перегрузка убавления
+	Vec3dT& operator-=(const Vec3dT& vec);                       //перегрузка убавления
 
-	vec3dt& operator*=(const double rhs);						 //перегрузка умножения	
+	Vec3dT& operator*=(const double rhs);						 //перегрузка умножения	
 
-	t x{ t() };
-	t y{ t() };
-	t z{ t() };
+	T x{ T() };													 //???
+	T y{ T() };													 //???
+	T z{ T() };													 //???
 };
 
-template<typename t>
-vec3dt<t> operator+(const vec3dt<t>& lhs, const vec3dt<t>& rhs);		 //сложение векторов
+template<typename T>
+Vec3dT<T> operator+(const Vec3dT<T>& lhs, const Vec3dT<T>& rhs);		 //сложение векторов
 
-template<typename t>
-vec3dt<t> operator-(const vec3dt<t>& lhs, const vec3dt<t>& rhs);		 //вычитание векторов
+template<typename T>
+Vec3dT<T> operator-(const Vec3dT<T>& lhs, const Vec3dT<T>& rhs);		 //вычитание векторов
 
-template<typename t>
-vec3dt<t> operator*(const vec3dt<t>& lhs, double rhs);					 //перемножение векторов
+template<typename T>
+Vec3dT<T> operator*(const Vec3dT<T>& lhs, double rhs);					 //перемножение векторов
 
 #endif
 
-template<typename t>
-vec3dt<t>::vec3d(const double xv, const double yv, const double zv)		 //реализация конструктора
+/*
+template<typename T>
+Vec3dT<T>::Vec3dT(const double xv, const double yv, const double zv)		 //реализация конструктора
 {
 	x = xv;
 	y = yv;
 	z = zv;
 }
+*/
 
-template<typename t>
-vec3dt<t>::vec3dt(const t& xv, const t& yv, const t& zv)
+template<typename T>
+Vec3dT<T>::Vec3dT(const T& xv, const T& yv, const T& zv)
 	: x(xv)
 	, y(yv)
 	, z(zv)
 {}
 
-template<typename t>
-bool vec3dt<t>:: operator==(const vec3dt<t>& rhs) const						//проверка на равенство
+template<typename T>
+bool Vec3dT<T>:: operator==(const Vec3dT<T>& rhs) const						//проверка на равенство
 {
 	bool a = true;
 	!(abs(x - rhs.x) < eps) ? a = false : a = a;
@@ -76,15 +78,15 @@ bool vec3dt<t>:: operator==(const vec3dt<t>& rhs) const						//проверка на равен
 	return a;
 }
 
-template<typename t>
-bool vec3dt<t>:: operator !=(const vec3dt<t>& rhs) const					//проверка на неравенство
+template<typename T>
+bool Vec3dT<T>:: operator!=(const Vec3dT<T>& rhs) const					//проверка на неравенство
 {
 	return !operator==(rhs);
 }
 
 
-template<typename t>
-vec3dt<t>::operator+=(const vec3dt<t>& vec)								   //перегрузка прибавления
+template<typename T>
+Vec3dT<T>& Vec3dT<T>:: operator+=(const Vec3dT<T>& vec)								   //перегрузка прибавления
 {
 	x += vec.x;
 	y += vec.y;
@@ -92,8 +94,8 @@ vec3dt<t>::operator+=(const vec3dt<t>& vec)								   //перегрузка прибавления
 	return *this;
 }
 
-template<typename t>
-vec3dt<t>::operator-=(const vec3dt<t>& vec)								   //перегрузка убавления
+template<typename T>
+Vec3dT<T>& Vec3dT<T>::operator-=(const Vec3dT<T>& vec)								   //перегрузка убавления
 {
 	x -= vec.x;
 	y -= vec.y;
@@ -101,8 +103,8 @@ vec3dt<t>::operator-=(const vec3dt<t>& vec)								   //перегрузка убавления
 	return *this;
 }
 
-template<typename t>
-vec3dt<t>::operator*=(const double rhs)									   //перегрузка умножения
+template<typename T>
+Vec3dT<T>& Vec3dT<T>::operator*=(const double rhs)									   //перегрузка умножения
 {
 	x *= rhs;
 	y *= rhs;
@@ -110,30 +112,30 @@ vec3dt<t>::operator*=(const double rhs)									   //перегрузка умножения
 	return *this;
 }
 
-template<typename t>
-vec3dt<t> operator+(const vec3dt<t>& lhs, const vec3dt<t>& rhs)				//сложение векторов
+template<typename T>
+Vec3dT<T> operator+(const Vec3dT<T>& lhs, const Vec3dT<T>& rhs)				//сложение векторов
 {
-	vec3dt<t> sum(lhs);
+	Vec3dT<T> sum(lhs);
 	sum.x += rhs.x;
 	sum.y += lhs.y;
 	sum.z += lhs.z;
 	return sum;
 }
 
-template<typename t>
-vec3dt<t> operator-(const vec3dt<t>& lhs, const vec3dt<t>& rhs)				//вычитание векторов
+template<typename T>
+Vec3dT<T> operator-(const Vec3dT<T>& lhs, const Vec3dT<T>& rhs)				//вычитание векторов
 {
-	vec3dt<t> sum(lhs);
+	Vec3dT<T> sum(lhs);
 	sum.x -= rhs.x;
 	sum.y -= lhs.y;
 	sum.z -= lhs.z;
 	return sum;
 }
 
-template<typename t>
-vec3dt<t> operator*(const vec3dt<t>& lhs, const double rhs)					//умножение векторов
+template<typename T>
+Vec3dT<T> operator*(const Vec3dT<T>& lhs, const double rhs)					//умножение векторов
 {
-	vec3dt<t> rez(lhs);
+	Vec3dT<T> rez(lhs);
 	rez.x *= rhs;
 	rez.y *= rhs;
 	rez.z *= rhs;
