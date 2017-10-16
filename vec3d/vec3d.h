@@ -4,41 +4,41 @@
 #include <iostream>
 #include <sstream>
 
-struct vec3d
+struct Vec3d
 {
 	double x = 0.0;
 	double y = 0.0;
 	double z = 0.0;
 	double eps = 0.00001;
 
-	vec3d() = default;											 //умолчательный конструктор
+	Vec3d() = default;											 //умолчательный конструктор
 
-	vec3d& operator=(const vec3d& rhs) = default;                // ??? !!!
+	Vec3d& operator=(const Vec3d& rhs) = default;                // ??? !!!
 
-	bool operator ==(const vec3d& rhs)const;					 //проверка на равенство
+	bool operator ==(const Vec3d& rhs)const;					 //проверка на равенство
 
-	bool operator !=(const vec3d& rhs)const;					 //проверка на неравенство
+	bool operator !=(const Vec3d& rhs)const;					 //проверка на неравенство
 
-	vec3d(const double xv, const double yv, const double zv);	 //конструктор
+	Vec3d(const double xv, const double yv, const double zv);	 //конструктор
 	
-	vec3d(const vec3d& v);										 //конструктор копирования (получает вектор "v")
+	Vec3d(const Vec3d& v);										 //конструктор копирования (получает вектор "v")
 	
-	~vec3d() = default;											 //удалятор
+	~Vec3d() = default;											 //удалятор
 
-	vec3d& operator+=(const vec3d& vec);                         //перегрузка прибавления
+	Vec3d& operator+=(const Vec3d& vec);                         //перегрузка прибавления
 	 
-	vec3d& operator-=(const vec3d& vec);                         //перегрузка убавления
+	Vec3d& operator-=(const Vec3d& vec);                         //перегрузка убавления
 
-	vec3d& operator*=(const double rhs);						 //перегрузка умножения	
+	Vec3d& operator*=(const double rhs);						 //перегрузка умножения	
 
 };
 
-	vec3d operator+(const vec3d& lhs, const vec3d& rhs);		 //сложение векторов
+	Vec3d operator+(const Vec3d& lhs, const Vec3d& rhs);		 //сложение векторов
 
-	vec3d operator-(const vec3d& lhs, const vec3d& rhs);		 //вычитание векторов
+	Vec3d operator-(const Vec3d& lhs, const Vec3d& rhs);		 //вычитание векторов
 
-	vec3d operator*(const vec3d& lhs, double rhs);				 //перемножение векторов
+	Vec3d operator*(const Vec3d& lhs, double rhs);				 //перемножение векторов
 
-	//vec3d operator*(double lhs, const vec3d& rhs);
+	//Vec3d operator*(double lhs, const vec3d& rhs);
 
 #endif

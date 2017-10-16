@@ -5,34 +5,34 @@ using namespace std;
 
 int main()
 {
-	vec3d N;
+	Vec3d N;
 	N.x = 1;
 	N.y = 2;
 	N.z = 3;
 
-	vec3d N1;
+	Vec3d N1;
 	N1.x = 1;
 	N1.y = 2;
 	N1.z = 3;
 
-	vec3d N2;
+	Vec3d N2;
 	N2.x = 1;
 	N2.y = 2;
 	N2.z = 3;
 
-	vec3d N3;
+	Vec3d N3;
 	N3.x = 1;
 	N3.y = 2;
 	N3.z = 3;
 
-	vec3d N4;
+	Vec3d N4;
 	N4.x = 1;
 	N4.y = 2;
 	N4.z = 3;
 
-	vec3d N5;
+	Vec3d N5;
 
-	vec3d M;
+	Vec3d M;
 	M.x = 1;
 	M.y = 2;
 	M.z = 3;
