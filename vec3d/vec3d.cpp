@@ -17,7 +17,7 @@
 		, z(v.z)
 	{}	
 	
-	Vec3d& Vec3d::operator+=(const Vec3d& vec)                          //перегрузка прибавления
+	Vec3d& Vec3d::operator+=(const Vec3d& vec)                          //перегрузка прибавления вектора
 	{
 		x += vec.x;
 		y += vec.y;
@@ -25,7 +25,7 @@
 		return *this;
 	}
 
-	Vec3d& Vec3d::operator-=(const Vec3d& vec)                          //перегрузка убавления
+	Vec3d& Vec3d::operator-=(const Vec3d& vec)                          //перегрузка убавления вектора
 	{
 		x -= vec.x;
 		y -= vec.y;
@@ -33,7 +33,7 @@
 		return *this;
 	}
 	
-	Vec3d& Vec3d::operator*=(const double rhs)                          //перегрузка умножения
+	Vec3d& Vec3d::operator*=(const double rhs)                          //перегрузка умножения на число
 	{
 		x *= rhs;
 		y *= rhs;
