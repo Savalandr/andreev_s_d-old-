@@ -15,7 +15,7 @@ struct Rational
 
 	Rational& operator+=(const Rational& rhs);	//перегрузка оператора прибавления дроби
 
-	Rational& operator+=(const int rhs);		//перегрузка оператора прибовления числа
+	Rational& operator+=(const int rhs);		//перегрузка оператора прибавления числа
 
 	Rational& operator-=(const Rational& rhs);	//перегрузка оператора вычитания дроби
 
