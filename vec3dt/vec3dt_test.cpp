@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
- 
+
 	Vec3dT<double> a;
 	Vec3dT<double> a1;
 	Vec3dT<double> a2;

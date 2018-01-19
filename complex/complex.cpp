@@ -3,56 +3,56 @@
 #include "complex.h"
 
 
- Complex::Complex(const double real)								//конструктор (странно написан)
-	 : Complex(real, 0.0)
- {
- }
+Complex::Complex(const double real)								//конструктор (странно написан)
+	: Complex(real, 0.0)
+{
+}
 
- Complex::Complex(const double real, const double imaginary)		//конструктор (странно написан)
-	 : re(real)
-	 , im(imaginary)
- {
- }
+Complex::Complex(const double real, const double imaginary)		//конструктор (странно написан)
+	: re(real)
+	, im(imaginary)
+{
+}
 
- Complex& Complex::operator+=(const double rhs)				//реализация оператора прибавления числа (через ссылку на другую реализацию)
- {
-	 return operator+=(Complex(rhs));
- }
+Complex& Complex::operator+=(const double rhs)				//реализация оператора прибавления числа (через ссылку на другую реализацию)
+{
+	return operator+=(Complex(rhs));
+}
 
- Complex& Complex:: operator-=(const double rhs)			//реализация оператора вычитаня числа (через ссылку на другую реализацию)
- {
-	 return operator-=(Complex(rhs));
- }
+Complex& Complex:: operator-=(const double rhs)			//реализация оператора вычитаня числа (через ссылку на другую реализацию)
+{
+	return operator-=(Complex(rhs));
+}
 
- Complex& Complex::operator+=(const Complex& rhs)			//реализация оператора прибавления комплексного числа
- {
-	 re += rhs.re;
-	 im += rhs.im;
-	 return *this;
- }
+Complex& Complex::operator+=(const Complex& rhs)			//реализация оператора прибавления комплексного числа
+{
+	re += rhs.re;
+	im += rhs.im;
+	return *this;
+}
 
- Complex& Complex::operator-=(const Complex& rhs)			//реализация оператора вычитания комплексного числа
- {
-	 re -= rhs.re;
-	 im -= rhs.im;
-	 return *this;
- }
+Complex& Complex::operator-=(const Complex& rhs)			//реализация оператора вычитания комплексного числа
+{
+	re -= rhs.re;
+	im -= rhs.im;
+	return *this;
+}
 
- Complex& Complex::operator*=(const Complex& rhs)			//реализация оператора умножения на комплексное число
- {
-	 Complex mult; 
-	 mult.re = re*rhs.re - im*rhs.im; 
-	 mult.im = re*rhs.im + im*rhs.re; 
-	 *this = mult; 
-	 return *this;
- }
+Complex& Complex::operator*=(const Complex& rhs)			//реализация оператора умножения на комплексное число
+{
+	Complex mult;
+	mult.re = re * rhs.re - im * rhs.im;
+	mult.im = re * rhs.im + im * rhs.re;
+	*this = mult;
+	return *this;
+}
 
- Complex& Complex::operator*=(const double rhs)				//реализация оператора умножения на число
- {
-	 re *= rhs;
-	 im *= rhs;
-	 return *this;
- }
+Complex& Complex::operator*=(const double rhs)				//реализация оператора умножения на число
+{
+	re *= rhs;
+	im *= rhs;
+	return *this;
+}
 
 Complex operator+(const Complex& lhs, const Complex& rhs)	//реализация оператора сложения комплексных чисел
 {

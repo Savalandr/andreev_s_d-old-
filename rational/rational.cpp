@@ -1,6 +1,6 @@
 #include <iostream> 
 #include <sstream> 
-#include "Rational.h"
+#include "rational.h"
 
 
 Rational::Rational(const int numerator, const int denominator)	//реализация конструктора
@@ -13,7 +13,7 @@ Rational& Rational::operator+=(const Rational& rhs)	//реализация оператора приба
 {
 	num = (num*rhs.den) + (rhs.num*den);
 	den *= rhs.den;
-	
+
 	{
 		if (num > den)
 		{
@@ -317,7 +317,7 @@ bool Rational ::operator==(const Rational& rhs)		//реализация проверки на равенс
 
 	int a = rhs.num;
 	int b = rhs.den;
-	
+
 	{
 		if (a > b)
 		{
@@ -344,11 +344,11 @@ bool Rational ::operator==(const Rational& rhs)		//реализация проверки на равенс
 			}
 		}
 	}
-	
-	
+
+
 	bool z;
 
-	if ((num == a) &&  (den == b))
+	if ((num == a) && (den == b))
 	{
 		z = true;
 	}
@@ -420,7 +420,7 @@ bool testParse(const std::string& str)										//что-то там про потоки
 	istrm >> z;
 	if (istrm.good())
 	{
-		cout << "Read success: "<< str<< "->"<< z<< endl;
+		cout << "Read success: " << str << "->" << z << endl;
 	}
 	else
 	{

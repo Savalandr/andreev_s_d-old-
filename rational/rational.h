@@ -8,7 +8,7 @@ struct Rational
 {
 	int num = 0.0;	//числитель
 	int den = 1.0;	//знаменатель
-	
+
 	Rational() = default;	//умолчательный конструктор
 
 	Rational(const int numerator, const int denominator);	//конструктор
@@ -32,10 +32,10 @@ struct Rational
 	bool operator==(const Rational& rhs);		//перегрузка проверки на равенсто
 
 	bool operator!=(const Rational& rhs);		//перегрузка проверки на неравенство
-	
+
 	std::ostream& writeTo(std::ostream& ostrm) const;	//что-то там про потоки
 	std::istream& readFrom(std::istream& istrm);		//что-то там про потоки
-	
+
 	static const char leftBrace{ '(' };			//что-то там из кода
 	static const char separator{ '/' };
 	static const char rightBrace{ ')' };

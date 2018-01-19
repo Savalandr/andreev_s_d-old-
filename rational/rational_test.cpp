@@ -1,18 +1,18 @@
 #include <iostream> 
 #include <sstream> 
-#include "Rational.h"
+#include "rational.h"
 using namespace std;
 
 int main()
 {
 	//---ясллш--------------------------------------------------------------------------
 
-	Rational a1(20,4);
-	Rational b1(4,2);
+	Rational a1(20, 4);
+	Rational b1(4, 2);
 	a1 += b1;
 
 	cout << "'+='" << "drob" << endl;
-	cout <<a1.num <<"/"<< a1.den << endl;
+	cout << a1.num << "/" << a1.den << endl;
 	cout << "----------" << endl;
 
 	Rational a11(20, 4);
@@ -76,7 +76,7 @@ int main()
 	cout << "'/='" << "chislo" << endl;
 	cout << a44.num << "/" << a44.den << endl;
 	cout << "----------" << endl;
-	
+
 	//---опнбепйх-----------------------------------------------------------------------
 
 	Rational a5(1, 3);
@@ -99,6 +99,6 @@ int main()
 
 	int ThatsAll;
 	cin >> ThatsAll;
-	
-	return 0;		
+
+	return 0;
 }

@@ -23,9 +23,9 @@ struct Vec3dT
 
 	bool operator !=(const Vec3dT& rhs)const;					 //проверка на неравенство
 
-	//Vec3dT(const double xv, const double yv, const double zv);	 //конструктор
+																 //Vec3dT(const double xv, const double yv, const double zv);	 //конструктор
 
-	//Vec3dT(const vec3dT& v);									 //конструктор копирования (получает вектор "v")
+																 //Vec3dT(const vec3dT& v);									 //конструктор копирования (получает вектор "v")
 
 	~Vec3dT() = default;										 //удалятор
 
@@ -52,15 +52,15 @@ Vec3dT<T> operator*(const Vec3dT<T>& lhs, double rhs);					 //перемножение векто
 
 #endif
 
-/*
-template<typename T>
-Vec3dT<T>::Vec3dT(const double xv, const double yv, const double zv)		 //реализация конструктора
-{
-	x = xv;
-	y = yv;
-	z = zv;
-}
-*/
+																		 /*
+																		 template<typename T>
+																		 Vec3dT<T>::Vec3dT(const double xv, const double yv, const double zv)		 //реализация конструктора
+																		 {
+																		 x = xv;
+																		 y = yv;
+																		 z = zv;
+																		 }
+																		 */
 
 template<typename T>
 Vec3dT<T>::Vec3dT(const T& xv, const T& yv, const T& zv)

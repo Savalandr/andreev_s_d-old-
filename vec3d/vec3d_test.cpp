@@ -49,16 +49,16 @@ int main()
 
 	cout << N3.x << " " << N3.y << " " << N3.z << endl;
 
-	N4 = N+M;
+	N4 = N + M;
 
 	cout << N4.x << " " << N4.y << " " << N4.z << endl;
-	
+
 	cout << "TEXT_test" << endl;
 
 	//дописать (придумать) проверку для проверок на равенство/неравенство
 
 	int ThatsAll;
-		cin >> ThatsAll;
+	cin >> ThatsAll;
 
 	return 0;
 }
